@@ -4,11 +4,12 @@ library(gstat)
 library(fields)
 library(sp)
 library(rgdal)
+library(proj4)
 
 ######################
 # LECTURE DES DONNEES
 ######################
-setwd('C:/Users/LibreService/Desktop/FormationR/')
+setwd('/mnt/dcappli/DEV_PERSO/WYa/tuto_krigeage/Formation-Krigeage/')
 data = read.table(file='Troyes/data.csv',h=T)
 coordinates(data) = ~X+Y 
 proj4string(data) = CRS("+init=epsg:27572")
